@@ -1,0 +1,20 @@
+.contacts__number   {
+    font-size: 1.125rem;
+}
+
+.contacts {
+    display: flex;
+    align-items: center;
+}
+
+.contacts__pic  {
+    margin-right: 0.375rem;
+}
+
+.contacts__phone    {
+    display: flex;
+    justify-content: flex-start;
+}
+.phone  {
+    margin: 0;
+}

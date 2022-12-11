@@ -1,0 +1,95 @@
+.comment    {
+    padding-bottom: 3.125rem;
+}
+
+.comment__title {
+    font-size: 3rem;
+    line-height: 3.25rem;
+    margin-bottom: 2rem;
+}
+
+.review {
+    height: 21.75rem;
+    position: relative;
+    margin-bottom: 0.625rem;
+}
+
+.review__item   {
+    opacity: 0;
+    background-color: #F8FAF9;
+    display: flex;
+    align-items: center;
+    padding: 2.625rem;
+    position: absolute;
+    overflow: hidden;
+    right: 0;
+    left: 0;
+}
+
+.review__item--active   {
+    opacity: 1;
+}
+
+.circle--review {
+    width: 5.1875rem;
+    height: 5.1875rem;
+    position: absolute;
+    text-align: center;
+    margin-left: 12.5rem;
+}
+
+.review__item:before {
+    content: '';
+    width: 83px;
+    height: 83px;
+    position: absolute;
+    border-radius: 50%;
+    background: #fff;
+    top: -60px;
+    left: 50%; 
+    transform: translateX(-50%);
+}
+
+.review__info   {
+    max-width: 30.3125rem;
+    text-align: left;
+    padding-top: 0.625rem;
+}
+
+.review__title  {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+    margin-bottom: 1.75rem;
+}
+
+.review__text   {
+    line-height: 1.1875rem;
+    color: #666666;
+    margin-bottom: 2.5rem;
+}
+
+.review__name   {
+    font-weight: 700;
+    font-size: 1.125rem;
+}
+
+.review__avatar {
+    width: 15.8125rem;
+    height: 16.5rem;
+    margin-right: 2.5rem;
+    flex-shrink: 0;
+}
+
+.review__pic    {
+    max-width: 100%;
+}
+
+.user-list__link--active img   {
+    border: 0.25rem solid #E01F3D;
+}   
+
+.user-list__img    {
+    width: 4.6875rem;
+    height: 4.6875rem;
+    border-radius: 50%;
+}

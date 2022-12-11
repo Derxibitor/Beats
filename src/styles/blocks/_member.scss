@@ -1,0 +1,54 @@
+.members    {
+    display: flex;
+    justify-content: space-between;
+}
+
+.team__title    {
+    font-size: 3rem;
+    line-height: 3.25rem;
+    margin-bottom: 3.25rem;
+}
+
+.member__container  {
+    text-align: center;
+}
+
+.member__name   {
+    font-size: 1.125rem;
+    font-weight: 700;
+    margin-top: 1.3rem;
+}
+
+.member__param-box  {
+    padding-top: 1rem;
+    display: none;
+}
+
+.member__param-result   {
+    color: #666666;
+    width: 12.8125rem;
+    margin: auto;
+}
+
+.arrow-down {
+    width: 0.5rem;
+    height: 0.5rem;
+    margin-top: 1.4rem;
+    margin-left: 0.3rem;
+}
+
+.arrow--up    {
+    rotate: 180deg;
+}
+
+.name__row  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.member__img--inner {
+    margin: auto;
+    margin-bottom: 1.5rem;
+    display: none;
+}

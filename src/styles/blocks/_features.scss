@@ -1,0 +1,31 @@
+.feature{
+    &__list   {
+    display: flex;
+    margin-top: 3.4375rem;
+    }
+
+    &__pic  {
+        margin-right: 0.625rem;
+    }
+
+    &__item {
+        display: flex;
+        align-items: flex-start;
+        margin-right: 0.625rem;
+
+        &:last-child    {
+            margin-right: 0rem;
+        }
+    } 
+
+    &__content  {
+        width: 7.125rem;
+        line-height: 1.125rem;
+        text-align: left;
+    }    
+
+    &__svg  {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+}

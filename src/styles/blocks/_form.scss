@@ -1,0 +1,141 @@
+$color-red: #E01F3D;
+$color-black: #292929;
+
+.input-delivery   {
+    background-color: #181818;
+    padding-bottom: 5.3125rem;
+}
+
+.input-delivery__title    {
+    color: white;
+    font-size: 3rem;
+    line-height: 3.25rem;
+    font-weight: 700;
+    margin: 0rem;
+    margin-bottom: 3.625rem;
+}
+
+.input__title   {
+    line-height: 1.125rem;
+    margin-bottom: 0.375rem;
+    margin-top: 0rem;
+    margin-left: 0.125rem;
+    color: white;
+}
+
+.form--btn {
+    padding: 1.3125rem 2.5625rem;
+    border: 0rem;
+}
+
+.form__buttons {
+    margin-top: 2.5rem;
+    text-align: start;
+}
+
+.form__clear   {
+    color: white;
+    background-color: #181818;
+    border: 0rem;
+}
+
+.input--radio   {
+    width: 1.6875rem;
+    height: 1.6875rem;
+    margin-right: 0.3125rem;
+
+    &:checked {
+        accent-color:$color-red;
+    }
+}
+
+.input--checkbox    {
+    width: 1.6875rem;
+    height: 1.6875rem;
+    margin-right: 0.3125rem;
+
+    &:checked   {
+        accent-color: white;
+    }
+}
+
+.columns    {
+    display: flex;
+    justify-content: space-between;
+}
+
+.column {
+    width: 48.5%;
+}
+
+.form__row  {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 0.9375rem;
+    margin-bottom: 0.6875rem;
+}
+
+.form__row--controls    {
+    justify-content: flex-start;
+    margin-bottom: 1rem;
+}
+
+.form__row--textarea    {
+    margin-bottom: 2.1875rem;
+}
+
+.input__row {
+    text-align: start; 
+}
+
+.input  {
+    flex: 1;
+    text-align: start;
+}
+
+.input__element {
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: 0.375rem;
+    border: 0.125rem solid transparent;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    padding: 1.0625rem 0.75rem;
+}
+
+.input__element:focus  {
+    outline: none;
+    border-color: $color-red;
+}
+
+.input__element--textarea    {
+    height: 9.375rem;
+}
+
+.input__box {
+    display: flex;
+    align-items: center;
+}
+
+.input-error    {
+    border-color: $color-red;
+}
+
+.modal  {
+    z-index: 10000;
+    display: none;
+}
+
+.modal__container   {
+    width: 19.375rem;
+    background-color: #FFFFFF;
+    height: 11rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal__content {
+    margin-bottom: 1rem;
+}

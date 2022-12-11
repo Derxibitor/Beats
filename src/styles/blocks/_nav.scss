@@ -1,0 +1,17 @@
+.menu__list {
+    display: flex;
+}
+
+.menu__item {
+    margin-right: 1.8125rem;
+
+    &:last-child    {
+        margin-right: 0rem;
+    }
+}
+
+.menu__link {
+    font-size: 1.125rem;
+    line-height: 1.875rem;
+    font-family: 'Alegreya Sans';  
+}

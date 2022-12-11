@@ -1,0 +1,21 @@
+.player {
+    background: #F8FAF9;
+}
+
+.player__title  {
+    font-size: 3rem;
+    margin-bottom: 2.75rem;
+}
+
+.player__playback-button    {
+    border-radius: 50%;
+    background-color: #E01F3D;
+    border: #E01F3D;
+    width: 0.75rem;
+    height: 0.75rem;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 0;
+    padding: 0;
+}

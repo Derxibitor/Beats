@@ -1,0 +1,44 @@
+.footer__map    {
+    height:100%;
+    width: 100%;
+    background: url(../img/map.png) center center / cover no-repeat;
+}
+
+.footer__wrap   {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+}
+
+.footer__content    {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.footer__contacts   {
+    padding: 1.25rem 0rem;
+    text-align: start;
+}
+
+.contacts__address  {
+    line-height: 1.5rem;
+    font-size: 1.125rem;
+}
+
+.icons__list--footer    {
+    padding: 1.875rem 0rem;
+}
+
+.icons__item    {
+    width: 1.875rem;
+    height: 1.875rem;
+    display: inline-block;
+}
+
+.icon__svg  {
+    width: 1.875rem;
+    height: 1.875rem;
+}
