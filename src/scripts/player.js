@@ -1,7 +1,7 @@
 let player;
 const playerContainer = $('.player')
 
-let eventsInit = () => {
+const eventsInit = () => {
     $(".player__start").click(e => {
         e.preventDefault();
 
@@ -53,7 +53,7 @@ const onPlayerReady = () => {
 function onYouTubeIframeAPIReady() {
     player = new YT.Player('yt-player', {
         height: '390',
-        width: '660',
+        width: '662',
         videoId: 'jpmJC4qBILs',
         events: {
             // 'onReady': onPlayerReady,

@@ -3,8 +3,10 @@ $color-black: #292929;
 
 .pager  {
     width: 25px;
-    position: absolute;
-    margin: 18.75rem 0rem 0rem 59.8125rem;
+		z-index: 20;
+		position: fixed;
+		top: 36%;
+		right: 14%;
 }
 
 .pager__item    {
