@@ -1,5 +1,6 @@
 // const { active } = require("browser-sync")
 
+
 const sections = $("section")
 const display = $(".main")
 const sidemenu = $('.pager')
@@ -14,10 +15,10 @@ const countSectionPosition = sectionEq => {
 
 const changeMenuThemeForSection = sectionEq => {
 		const currentSection = sections.eq(sectionEq)
-		const menuTheme = currentSection.attr(data-sidemenu-theme)
+		const menuTheme = currentSection.attr('data-sidemenu-theme')
 		const activeClass = 'circle--shadowed'
 
-		if (menuTheme == black) {
+		if (menuTheme == 'black') {
 			sidemenu.addClass(activeClass)
 		} else {
 			sidemenu.removeClass(activeClass)
@@ -25,11 +26,14 @@ const changeMenuThemeForSection = sectionEq => {
 }
 
 const performTransition = sectionEq => {
+	if ($('body').hasClass("scrollLock")) {
+		return
+	}
 	if (inScroll == false) {
 		inScroll = true;
 		const position = countSectionPosition(sectionEq)
 
-		// changeMenuThemeForSection(sectionEq)
+		changeMenuThemeForSection(sectionEq)
 
 		display.css({
         transform: `translateY(${position}%)`
@@ -40,7 +44,7 @@ const performTransition = sectionEq => {
 		setTimeout(() => {
 			inScroll = false;
 
-			sidemenu.find('pager__item').eq(sectionEq).addClass('pager__item--active').siblings().removeClass('pager__item--active');
+			sidemenu.find('.pager__item').eq(sectionEq).addClass('pager__item--active').siblings().removeClass('pager__item--active');
 		}, 1300);
 	}
 }
@@ -85,14 +89,34 @@ if (tagName != 'input' && tagName != 'textarea') {
 }
 })
 
+const mobileDetect = new MobileDetect(window.navigator.userAgent)
+const isMobile = mobileDetect.mobile();
+
+if (isMobile) {
+	$("body").swipe({
+	swipe:function(event, direction,) {
+		const scroller = viewportScroller();
+		let scrollDirection = '';
+
+		if (direction == 'up') scrollDirection = 'next';
+			
+		if (direction == 'down') scrollDirection = 'prev';
+		scroller[scrollDirection]();
+	}
+})};
+
+$('.wapper').on('touchmove', e => {
+	e.preventDefault();
+})
+
 $('[data-scroll-to]').click(e => {
 	e.preventDefault()
+	$('body').removeClass('scrollLock')
 
 	const target = $(e.currentTarget)
 	const targetScroll = target.attr('data-scroll-to')
 	const reqSection = $(`[data-section-id=${targetScroll}]`)
 
-	console.log();
-
 	performTransition(reqSection.index())
 })
+

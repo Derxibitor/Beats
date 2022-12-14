@@ -18,6 +18,10 @@ body {
     font-size: 1rem;
     line-height: 1.18rem;
     height: 100%;
+
+		.scrollLock	{
+			overflow: hidden;
+		}
 }
 
 .wrapper    {
@@ -68,7 +72,7 @@ svg {
 }
 
 .section    {
-    height: 100vh;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;

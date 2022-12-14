@@ -10,22 +10,21 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
     <link rel="stylesheet" href="css/main.min.css">
-		<link rel="stylesheet" href="./styles/main.css">
     <title>Beats</title>
 </head>
 <body>
     <div class="wrapper">
-			<ul class="pager">
-				<li class="pager__item pager__item--active"><div class="circle"></div></li>
-				<li class="pager__item"><div class="circle"></div></li>
-				<li class="pager__item"><div class="circle"></div></li>
-				<li class="pager__item"><div class="circle"></div></li>
-				<li class="pager__item"><div class="circle"></div></li>
-				<li class="pager__item"><div class="circle"></div></li>
-				<li class="pager__item"><div class="circle"></div></li>
-				<li class="pager__item"><div class="circle"></div></li>
-				<li class="pager__item"><div class="circle"></div></li>
-		</ul>
+				<ul class="pager">
+						<li class="pager__item pager__item--active"><a data-scroll-to="topline" href="#" class="circle"></a></li>
+						<li class="pager__item"><a data-scroll-to="benefits" href="#" class="circle"></a></li>
+						<li class="pager__item"><a data-scroll-to="product" href="#" class="circle"></a></li>
+						<li class="pager__item"><a data-scroll-to="team" href="#" class="circle"></a></li>
+						<li class="pager__item"><a data-scroll-to="colors" href="#" class="circle"></a></li>
+						<li class="pager__item"><a data-scroll-to="comment" href="#" class="circle"></a></li>
+						<li class="pager__item"><a data-scroll-to="player" href="#" class="circle"></a></li>
+						<li class="pager__item"><a data-scroll-to="form" href="#" class="circle"></a></li>
+						<li class="pager__item"><a data-scroll-to="footer" href="#" class="circle"></a></li>
+				</ul>
         <main class="main">
             <section data-sidemenu-theme="" data-section-id="topline" class="section topline">
                 <div class="container topline__container">
@@ -101,7 +100,7 @@
                         </li>
                         <li class="benefits__item">
                             <div class="benefits__cirle">
-                                <svg class="benefits__svg sound">
+                                <svg class="benefits__svg soundd">
                                     <use xlink:href="sprite.svg#sound">
                                 </svg>
                             </div>
@@ -374,7 +373,7 @@
                     </ul>
                 </div>
             </section>
-            <section data-sidemenu-theme="" data-section-id="colors" class="section colors">
+            <section data-sidemenu-theme="black" data-section-id="colors" class="section colors">
                 <div class="colors__container">
                     <h2 class="colors__title">ЦВЕТА</h2>
                     <ul class="colors__list">
@@ -453,41 +452,40 @@
                     </div>
                 </div>
             </section>
-            <section data-sidemenu-theme="" data-section-id="player" class="section player">
-                <div class="container player__container">
-                    <h2 class="player__title">КАК МЫ РАБОТАЕМ</h2>
-                    <div class="player__box">
-											<a href="#" class="player__btn">
-												<svg class="player__btn--svg">
-													<use xlink:href="sprite.svg#playbtn">
-												</svg>
-											</a>
-											<div class="player__wrapper player__wrapper--active">
-													<div id="yt-player" class="player__elem"></div>
-													<div class="player__splash"></div>
+            <section data-sidemenu-theme="" data-section-id="player" class="section video">
+                <div class="container video__container">
+                    <h2 class="video__title">КАК МЫ РАБОТАЕМ</h2>
+                    <div class="video__wrapper">
+											<div class="video__player">
+												<video src="img/video.mp4" id="player" class="video__source">
+													<source src="img/tron_legacy_trailer.mp4" type="video/mp4">
+												</video>
+												<button class="video__player-btn">
+													<img src="img/playbtn.png" alt="" class="play video__btn-img">
+												</button>
 											</div>
-											<div class="player__controls">
-													<div class="player__controls--box">
-														<a class="player__start">
-															<svg class="player__start--svg">
-																<use xlink:href="sprite.svg#playbtn">
-															</svg>
-														</a>
-														<div class="player__playback">
-																<a class="player__playback-button"></a>
-														</div>
-														<div class="player__volume">
-																<svg class="player__volume--svg">
-																	<use xlink:href="sprite.svg#volume">
-																</svg>
-																<div class="player__volume-bar"></div>
-														</div>
+											<div class="video__toolbar">
+												<div class="duration">
+													<div class="duration__btn-wrap">
+														<button class="play duration__img"></button>
 													</div>
+													<div class="duration__length-wrap">
+														<input type="range" class="duration__length" id="duration__level">
+													</div>
+												</div>
+												<div class="sound">
+													<button class="sound__btn" id="soundBtn">
+														<img src="img/dynamic.png" alt="" id="dynamic" class="sound__pic">
+													</button>
+													<div class="sound__volume">
+														<input type="range" class="sound__length duration__length duration__lenght--other sound--length" id="micLevel">
+													</div>
+												</div>
 											</div>
-                    </div>
+										</div>
                 </div>
             </section>
-            <section data-sidemenu-theme="" data-section-id="form" class="section input-delivery">
+            <section data-sidemenu-theme="black" data-section-id="form" class="section input-delivery">
                 <div class="container">
                     <h2 class="input-delivery__title">ЗАКАЖИТЕ ДОСТАВКУ</h2>
                     <form class="form">
@@ -632,7 +630,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
     <script src="https://www.youtube.com/iframe_api"></script>
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
-    <script src="scripts/hamburger.js"></script>
+    <!-- <script src="scripts/hamburger.js"></script>
     <script src="scripts/form.js"></script>
     <script src="scripts/slider.js"></script>
     <script src="scripts/team.js"></script>
@@ -640,7 +638,7 @@
     <script src="scripts/colors.js"></script>
     <script src="scripts/player.js"></script>
     <script src="scripts/onPageScroll.js"></script>
-    <script src="scripts/map.js"></script>
-    <!-- <script src="main.min.js"></script> -->
+    <script src="scripts/map.js"></script> -->
+    <script src="main.min.js"></script>
 </body>
 </html>
