@@ -95,13 +95,14 @@ const isMobile = mobileDetect.mobile();
 if (isMobile) {
 	$("body").swipe({
 	swipe:function(event, direction,) {
-		const scroller = viewportScroller();
-		let scrollDirection = '';
 
-		if (direction == 'up') scrollDirection = 'next';
+		if (direction == 'up') {
+			scrollViewport('next')
+		} 
 			
-		if (direction == 'down') scrollDirection = 'prev';
-		scroller[scrollDirection]();
+		if (direction == 'down') {
+			scrollViewport('prev')
+		}
 	}
 })};
 
